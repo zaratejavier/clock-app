@@ -4,11 +4,12 @@ import { Button } from "semantic-ui-react";
 import MyContainer from "./Container";
 import Clock from "./Clock";
 import Data from "./Data";
+import Demo from "./Demo"
 
 class App extends React.Component {
 
   state = { showClock: false, showData: false };
-  
+
   toggleClock = () => {
     this.setState({
       showClock: !this.state.showClock,
@@ -30,6 +31,7 @@ class App extends React.Component {
 
         {this.state.showData && <Data />}
         <Button onClick={this.toggleData}>toggle data</Button>
+        <Demo/>
       </MyContainer>
     );
   }
