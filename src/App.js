@@ -6,12 +6,15 @@ import Clock from "./Clock";
 import Data from "./Data";
 
 class App extends React.Component {
+
   state = { showClock: false, showData: false };
+  
   toggleClock = () => {
     this.setState({
       showClock: !this.state.showClock,
     });
   };
+
   toggleData = () => {
     this.setState({
       showData: !this.state.showData,
@@ -24,6 +27,7 @@ class App extends React.Component {
       <MyContainer>
         {this.state.showClock && <Clock />}
         <Button onClick={this.toggleClock}>toggle clock</Button>
+
         {this.state.showData && <Data />}
         <Button onClick={this.toggleData}>toggle data</Button>
       </MyContainer>
